@@ -4,6 +4,8 @@ defmodule HeadsUpWeb.IncidentLive.Index do
   alias HeadsUp.Incidents
   alias HeadsUp.Incident
 
+  import HeadsUpWeb.CustomComponents
+
   def mount(_params, _session, socket) do
     {:ok, socket |> assign(incidents: Incidents.list())}
   end
@@ -14,16 +16,6 @@ defmodule HeadsUpWeb.IncidentLive.Index do
       <div class="incidents">
         <.incident_card :for={incident <- @incidents} incident={incident} />
       </div>
-    </div>
-    """
-  end
-
-  attr :status, :atom, required: true, values: [:pending, :resolved, :canceled]
-
-  def badge(assigns) do
-    ~H"""
-    <div class="badge">
-      <%= @status %>
     </div>
     """
   end
