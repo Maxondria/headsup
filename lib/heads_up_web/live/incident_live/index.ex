@@ -13,7 +13,7 @@ defmodule HeadsUpWeb.IncidentLive.Index do
   def render(assigns) do
     ~H"""
     <div class="incident-index">
-      <.headline>
+      <.headline :if={false}>
         <.icon name="hero-trophy-mini" /> 25 Incidents Resolved This Month!
         <:taglines :let={vibe}>
           Thanks for pitching in. <%= vibe %>

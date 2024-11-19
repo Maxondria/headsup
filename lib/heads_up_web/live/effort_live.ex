@@ -8,7 +8,7 @@ defmodule HeadsUpWeb.EffortLive do
 
     {:ok,
      socket
-     |> assign(responders: 0, minutes_per_responder: 10)}
+     |> assign(responders: 0, minutes_per_responder: 10, page_title: "Effort")}
   end
 
   def render(assigns) do
