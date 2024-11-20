@@ -1,0 +1,23 @@
+<div class="incident-show">
+  <div class="incident">
+    <img src="/images/flat-tire.jpg" />
+    <section>
+      <.badge status={@incident.status} />
+      <header>
+        <h2><%= @incident.name %></h2>
+        <div class="priority">
+          <%= @incident.priority %>
+        </div>
+      </header>
+      <div class="description">
+        <%= @incident.description %>
+      </div>
+    </section>
+  </div>
+  <div class="activity">
+    <div class="left"></div>
+    <div class="right">
+      <.urgent_incidents incidents={@urgent_incidents} />
+    </div>
+  </div>
+</div>
