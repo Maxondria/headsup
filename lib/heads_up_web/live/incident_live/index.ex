@@ -2,7 +2,7 @@ defmodule HeadsUpWeb.IncidentLive.Index do
   use HeadsUpWeb, :live_view
 
   alias HeadsUp.Incidents
-  alias HeadsUp.Incident
+  alias HeadsUp.Incidents.Incident
 
   import HeadsUpWeb.CustomComponents
 
